@@ -7,5 +7,6 @@ func setUpApiRouter(api *apiStat) chi.Router {
 	//apiRouter.Use(middlewareCors)
 	apiRouter.Get("/healthz", healthHandler)
 	apiRouter.Get("/metrics", api.displayStats)
+	apiRouter.Get("/profane", checkProfane)
 	return apiRouter
 }
