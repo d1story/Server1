@@ -8,5 +8,6 @@ func setUpApiRouter(api *apiStat) chi.Router {
 	apiRouter.Get("/healthz", healthHandler)
 	apiRouter.Get("/metrics", api.displayStats)
 	apiRouter.Get("/profane", checkProfane)
+	apiRouter.Get("/login", authenticate)
 	return apiRouter
 }
